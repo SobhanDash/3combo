@@ -1,12 +1,17 @@
-var dob = prompt("Enter your DOB in dd/mm/yyyy format: ");
-alist = dob.split(/[/]/);
-// console.log(alist);
-year = alist[2];
-// console.log(year);
-var leapYearMessage="Your birth year is a leap year!";
-var notLeapYearMessage ="Your birth year is not a leap year!"
+var date = document.querySelector("#dob");
+var check = document.querySelector("#check");
+var outputDiv = document.querySelector("#output");
 
-function leapYear(year1){
+
+function leapYear(){
+  var dob = date.value
+  alist = dob.split(/[/]/);
+  // console.log(alist);
+  year = alist[2];
+  // console.log(year);
+  var leapYearMessage="Your birth year is a leap year!";
+  var notLeapYearMessage ="Your birth year is not a leap year!"
+
   if(year1 % 4 === 0){
     if(year1 % 100 === 0){
       if(year1 % 400 === 0){
@@ -23,6 +28,6 @@ function leapYear(year1){
   return notLeapYearMessage;
 }
 
-alert(leapYear(year))
+(leapYear(year))
 
-// this is a test for PR
+check.addEventListener("click",leapYear)

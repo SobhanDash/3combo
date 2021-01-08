@@ -1,4 +1,4 @@
-var userInput = prompt("Enter a number:");
+var userInput =("Enter a number:");
 
 // split -> reverse -> join
 
