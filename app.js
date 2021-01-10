@@ -25,15 +25,14 @@ function leapYear(){
   }
  }
 
+
 var ipPrime  = document.querySelector("#prime");
 var btnSubmit = document.querySelector("#submit");
 var outDiv = document.querySelector("#output1");
 
 btnSubmit.addEventListener("click", isPrime);
 
-
 function isPrime(){
-  console.log(ipPrime.value)
   var num = parseInt(ipPrime.value);
   var primeMssg = num + " is a Prime! :)"
   var notPrimeMssg = num + " is not a Prime :("
@@ -61,3 +60,25 @@ function isPrime(){
   }
 }
 
+
+var ipPallin = document.querySelector("#pallin");
+var check1 = document.querySelector("#check1");
+var opDiv = document.querySelector("#op");
+
+check1.addEventListener("click",checkpallin);
+
+function checkpallin(){
+  var isPallin = "It is a palindrome";
+  var notPallin = "It's not a palindrome";
+  var ipVal = ipPallin.value
+  var astr = (ipVal).split("").reverse().join("");
+
+  if (ipVal===astr){
+    document.getElementById("op").style.display = "block";
+    opDiv.innerText = isPallin;
+  }
+  else{
+    document.getElementById("op").style.display = "block";
+    opDiv.innerText = notPallin; 
+  }
+}
