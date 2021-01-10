@@ -6,7 +6,7 @@ var outputDiv = document.querySelector("#output");
 btnTranslate.addEventListener("click", leapYear)
 function leapYear(){
   var dob = date.value
-  alist = dob.split(/[/]/);
+  alist = dob.split(/[-,/]/);
   year = alist[2];
   var leapYearMessage="Your birth year is a leap year!";
   var notLeapYearMessage ="Your birth year is not a leap year!";
