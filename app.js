@@ -29,6 +29,7 @@ function leapYear(){
 var ipPrime  = document.querySelector("#prime");
 var btnSubmit = document.querySelector("#submit");
 var outDiv = document.querySelector("#output1");
+//document.getElementById("output1").style.display = "none";
 
 btnSubmit.addEventListener("click", isPrime);
 
@@ -64,6 +65,7 @@ function isPrime(){
 var ipPallin = document.querySelector("#pallin");
 var check1 = document.querySelector("#check1");
 var opDiv = document.querySelector("#op");
+//document.getElementById("op").style.display = "none";
 
 check1.addEventListener("click",checkpallin);
 
