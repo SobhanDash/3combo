@@ -19,6 +19,7 @@ button {
     padding: 2rem;
     display: block;
     border-radius: 1rem;
+    cursor: pointer;
 }
 
 /* outputs */
