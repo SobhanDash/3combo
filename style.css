@@ -1,9 +1,29 @@
+/* import font */
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Nerko+One&family=Press+Start+2P&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
+:root{
+    --primary: #6710c2;
+    --side: ;
+    --secondary: #c81d77;
+    --c1: #3F37C9;
+    --c2: #4361EE;
+    --box-shadow1: #6A0DAD;
+    --box-shadow2: #D00070;
+    --gray: #5A5A5A;
+}
+
+
+body{
+    background-color: var(--primary);
+    font-family: 'Kalam', cursive;
+}
 
 input {
     margin: auto;
@@ -12,6 +32,8 @@ input {
     width: 100%;
     display: block;
     border-radius: 1rem;
+    background-image: linear-gradient(to bottom right, var(--box-shadow1), var(--primary));
+    color: #2feaa8;
 }
 
 
@@ -22,6 +44,8 @@ button {
     display: block;
     border-radius: 1rem;
     cursor: pointer;
+    background-image: linear-gradient(to bottom right, var(--box-shadow1), var(--primary));
+    color: #2feaa8;
 }
 
 
@@ -31,7 +55,8 @@ button {
     margin: auto;
     width: 100%;
     padding: 2rem;
-    background-color: blueviolet;
+    background-image: linear-gradient(to bottom right, var(--box-shadow1), var(--primary));
+    color: #2feaa8;
     margin-bottom: 1rem;
     border-radius: 1rem;
 }
@@ -41,7 +66,8 @@ button {
     margin: auto;
     width: 100%;
     padding: 2rem;
-    background-color: blueviolet;
+    background-image: linear-gradient(to bottom right, var(--box-shadow1), var(--primary));
+    color: #2feaa8;
     margin-bottom: 1rem;
     border-radius: 1rem;
 }
@@ -51,7 +77,8 @@ button {
     margin: auto;
     width: 100%;
     padding: 2rem;
-    background-color: blueviolet;
+    background-image: linear-gradient(to bottom right, var(--box-shadow1), var(--primary));
+    color: #2feaa8;
     margin-bottom: 1rem;
     border-radius: 1rem;
 }
@@ -87,7 +114,7 @@ button {
     justify-content: space-around;
     flex-wrap: wrap;
     flex-direction: row;
-    background-color: #60A5FA;
+    background-color: var(--primary);
 } 
 
 .containerw{
@@ -105,13 +132,27 @@ button {
     justify-content: space-around;
     flex-wrap: wrap;
     flex-direction: row;
-    background-color: #ffffff;
+    background-color: var(--secondary);
 }
 
-.image-container img  , .image-container1 img
-{
-    max-width: 500px;
+.container-fluid {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
 
+
+/* image containers */
+.image-container{
+    padding: 2rem;
+    display: block;
+    text-align: center;
+    margin: auto;
+    max-width: 600px;
+}
+
+.image-container img {
+    max-width: 500px;
+    border-radius: 2rem;
 }
 
 
@@ -122,9 +163,8 @@ button {
     padding: 1rem;
     border-radius: 2rem;
     text-align: center;
-    background: #60A5FA;
-    box-shadow:  20px 20px 60px #528cd5, 
-             -20px -20px 60px #6ebeff;
+    background: var(--primary);
+    box-shadow:  20px 20px 60px var(--box-shadow2), -20px -20px 60px var(--secondary);
     align-items: center;
 } 
 .contentw{
@@ -133,9 +173,75 @@ button {
     padding: 1rem;
     border-radius: 2rem;
     text-align: center;
-    background: #ffffff;
-    box-shadow:  20px 20px 60px #d9d9d9, 
-             -20px -20px 60px #ffffff;
+    background: var(--secondary);
+    box-shadow:  20px 20px 60px var(--box-shadow1), -20px -20px 60px var(--primary);
     align-items: center;
 } 
 
+
+/* nav */
+.navigation {
+    font-family: 'Kalam', cursive;
+    font-size: 3rem;
+    padding: 1rem;
+    background-color: var(--primary);
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
+}
+
+
+/* list */
+.list-non-bullet {
+    list-style: none;
+}
+
+.list-item-inline {
+    display: inline;
+    padding: 0rem 0.5rem;
+}
+
+
+/* footer */
+.footer {
+    background-color: var(--primary);
+    padding: 2rem 0rem;
+    text-align: center;
+    color: white;
+    border-bottom-right-radius: 1rem;
+    font-family: 'Kalam', cursive;
+    font-size: 1.2rem;
+    background-image: linear-gradient(to top right, var(--secondary), var(--primary));
+}
+footer .link {
+    color: var(--side);
+    text-decoration: none;
+    width: max-content;
+
+}
+
+footer ul {
+    padding-inline-start: 0px;
+}
+
+.footer i{
+    color: white;
+    font-size: 30px;
+    margin: 1rem;
+}
+
+.footer i:hover {
+    color: var(--gray);
+}
+
+.footer .footer-header {
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+
+
+@media  screen and (max-width:568px)
+{
+    .image-container img 
+    {max-width: 400px;}   
+}
