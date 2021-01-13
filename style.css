@@ -10,10 +10,9 @@
 
 :root{
     --primary: #6710c2;
-    --side: ;
+    --side: #f5f5f5;
     --secondary: #c81d77;
     --c1: #3F37C9;
-    --c2: #4361EE;
     --box-shadow1: #6A0DAD;
     --box-shadow2: #D00070;
     --gray: #5A5A5A;
@@ -25,6 +24,10 @@ body{
     font-family: 'Kalam', cursive;
 }
 
+::placeholder { 
+    color: var(--side);
+}
+
 input {
     margin: auto;
     margin-bottom: 1rem;
@@ -32,8 +35,10 @@ input {
     width: 100%;
     display: block;
     border-radius: 1rem;
-    background-image: linear-gradient(to bottom right, var(--box-shadow1), var(--primary));
-    color: #2feaa8;
+    background-image: linear-gradient(to bottom right, var(--c1), var(--box-shadow2));
+    color: var(--side);
+    font-size: 0.9rem;
+    
 }
 
 
@@ -44,21 +49,23 @@ button {
     display: block;
     border-radius: 1rem;
     cursor: pointer;
-    background-image: linear-gradient(to bottom right, var(--box-shadow1), var(--primary));
-    color: #2feaa8;
+    background-image: linear-gradient(to bottom right, var(--box-shadow2), var(--c1));
+    color: var(--side);
+    font-size: 1rem;
 }
 
 
 /* outputs */
-#output {
+#output, #op{
     display: block;
     margin: auto;
     width: 100%;
     padding: 2rem;
-    background-image: linear-gradient(to bottom right, var(--box-shadow1), var(--primary));
-    color: #2feaa8;
+    background-image: linear-gradient(to bottom right, var(--c1), var(--box-shadow2));
+    color: var(--side);
     margin-bottom: 1rem;
     border-radius: 1rem;
+    font-size: 1rem;
 }
 
 #output1 {
@@ -66,21 +73,11 @@ button {
     margin: auto;
     width: 100%;
     padding: 2rem;
-    background-image: linear-gradient(to bottom right, var(--box-shadow1), var(--primary));
-    color: #2feaa8;
+    background-image: linear-gradient(to bottom right, var(--c1), var(--box-shadow2));
+    color: var(--side);
     margin-bottom: 1rem;
     border-radius: 1rem;
-}
-
-#op {
-    display: block;
-    margin: auto;
-    width: 100%;
-    padding: 2rem;
-    background-image: linear-gradient(to bottom right, var(--box-shadow1), var(--primary));
-    color: #2feaa8;
-    margin-bottom: 1rem;
-    border-radius: 1rem;
+    font-size: 1rem;
 }
 
 
@@ -93,9 +90,7 @@ button {
 .section h1 {
     text-align: center;
 }
-.ow {
-    background-color: gray;
-}
+
 
 
 /* containers */
@@ -240,7 +235,7 @@ footer ul {
 }
 
 
-@media  screen and (max-width:568px)
+@media  screen and (max-width:560px)
 {
     .image-container img 
     {max-width: 400px;}   
