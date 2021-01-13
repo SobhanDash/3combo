@@ -38,18 +38,18 @@ function isPrime(){
   var primeMssg = num + " is a Prime! :)"
   var notPrimeMssg = num + " is not a Prime :("
   let result = true
-
-    if(num==1){
-        result = false;
-    }
-    else{
-        for(var i=2; i<num; i++){
-            if(num%i==0){
-                result = false;
-                break;
-            }
-        }
-    }
+  
+  if(num==1){
+      result = false;
+  }
+  else{
+      for(var i=2; i<num; i++){
+          if(num%i==0){
+              result = false;
+              break;
+          }
+      }
+  }
   
   if (result==true){
     document.getElementById("output1").style.display = "block";
